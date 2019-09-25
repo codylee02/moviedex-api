@@ -23,7 +23,6 @@ app.use(function validateBearerToken(req, res, next) {
 
 app.get("/movie", function handleGetMovies(req, res) {
   let response = MOVIES;
-  let queryArr = Object.keys(req.query);
 
   if (req.query.genre) {
     response = response.filter(movie =>
